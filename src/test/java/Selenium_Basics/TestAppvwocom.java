@@ -6,8 +6,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import utils.CommonMethods;
 
-public class TestAppvwocom {
+public class TestAppvwocom extends CommonMethods {
     @Test
     public void test_app_vwo_com() throws InterruptedException {
         WebDriver driver = new ChromeDriver();
@@ -17,9 +18,9 @@ public class TestAppvwocom {
         email_field.sendKeys("admin@admin.com");
         WebElement password = driver.findElement(By.id("login-password"));
         password.sendKeys("wrongpass@1234");
+        CommonMethods.checkVisibility(driver,By.id("js-login-btn"),5);
         WebElement submit_button = driver.findElement(By.id("js-login-btn"));
         submit_button.click();
-        Thread.sleep(5000);
 
         WebElement error_message = driver.findElement(By.className("notification-box-description"));
         System.out.println(error_message.getText());
