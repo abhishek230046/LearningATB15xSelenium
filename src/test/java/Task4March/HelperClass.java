@@ -54,10 +54,4 @@ public class HelperClass {
          wait_for_element_clickable(button);
          button.click();
     }
-
-    @AfterTest
-    public void teardown()
-    {
-        driver.quit();
-    }
 }
