@@ -25,14 +25,25 @@ public class HelperClass {
 
     public static void wait_for_visibility(WebElement element)
     {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
         wait.until(ExpectedConditions.visibilityOf(element));
+    }
+
+    public static WebElement wait_for_visibility(By locator) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
 
     public static void wait_for_element_clickable(WebElement element)
     {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
         wait.until(ExpectedConditions.elementToBeClickable(element));
+    }
+
+    public static void wait_for_alert(WebElement element)
+    {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+        wait.until(ExpectedConditions.alertIsPresent());
     }
 
 
@@ -53,5 +64,9 @@ public class HelperClass {
     {
          wait_for_element_clickable(button);
          button.click();
+    }
+
+    public static void jswait() throws InterruptedException {
+        Thread.sleep(3000);
     }
 }

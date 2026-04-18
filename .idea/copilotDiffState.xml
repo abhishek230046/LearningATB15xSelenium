@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CopilotDiffPersistence">
+    <option name="pendingDiffs">
+      <map>
+        <entry key="$PROJECT_DIR$/src/test/java/ActionClasses/KeyboardActions.java">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/src/test/java/ActionClasses/KeyboardActions.java" />
+              <option name="originalContent" value="    @Test&#10;    @Description(&quot;Keyboard actions to enter first name in caps&quot;)&#10;    public void test_ActionKeyboard() {&#10;        // TODO: Implement keyboard actions to enter first name in caps&#10;    }&#10;&#10;public class KeyboardActions {&#10;&#10;}&#10;" />
+              <option name="updatedContent" value="package ActionClasses;&#10;&#10;import io.qameta.allure.Description;&#10;import org.testng.annotations.Test;&#10;&#10;public class KeyboardActions {&#10;&#10;    @Test&#10;    @Description(&quot;Keyboard actions to enter first name in caps&quot;)&#10;    public void test_ActionKeyboard() {&#10;        // TODO: Implement keyboard actions to enter first name in caps&#10;    }&#10;&#10;}" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
